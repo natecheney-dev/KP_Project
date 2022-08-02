@@ -171,12 +171,12 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <h1> XYZ Widget <a  href = 'https://www.investopedia.com/terms/e/equilibrium.asp' target="_blank">Equilibrium</a> Pricing</h1>
+        <h1> XYZ Widget <a href='https://www.investopedia.com/terms/e/equilibrium.asp' target="_blank">Equilibrium</a> Pricing</h1>
       </header>
       <div className="main-app">
         <div className="app-left">
           <div id="intro" className="container">
-            <h2>ABC Company Inc. has just invented the XYZ Widget. A revolutionary product that will change the lives of everyone that buys it. In this exercise, you will help ABC Company Inc choose the correct <a href = 'https://www.investopedia.com/terms/e/equilibrium.asp' target="_blank">equilibrium</a> price for the new product. </h2>
+            <h2>ABC Company Inc. has just invented the XYZ Widget. A revolutionary product that will change the lives of everyone that buys it. In this exercise, you will help ABC Company Inc choose the correct <a href='https://www.investopedia.com/terms/e/equilibrium.asp' target="_blank">equilibrium</a> price for the new product. </h2>
           </div>
           <div id='input' className='container'>
             <form>
@@ -251,25 +251,25 @@ function App() {
                 return (
                   <div>
                     <table>
-                      <tr>
-                        <td><strong>Price: </strong>  &nbsp; ${item.price}</td>
-                        <td><strong>Sold: </strong>  &nbsp; #{item.amtsold}</td>
-                        <td><strong>Revenue: </strong>  &nbsp; ${item.revenue}</td>
-                      </tr>
+
+                      <td><strong>Price: </strong>  &nbsp; ${item.price}</td>
+                      <td><strong>Sold: </strong>  &nbsp; #{item.amtsold}</td>
+                      <td><strong>Revenue: </strong>  &nbsp; ${item.revenue}</td>
+
                     </table>
                   </div>
 
                 )
               }
-              else{
+              else {
                 return (
                   <div>
-                    <table className = 'highlight-price'>
-                      <tr>
-                        <td><strong>Price: </strong>  &nbsp; ${item.price}</td>
-                        <td><strong>Sold: </strong>  &nbsp; #{item.amtsold}</td>
-                        <td><strong>Revenue: </strong>  &nbsp; ${item.revenue}</td>
-                      </tr>
+                    <table className='highlight-price'>
+
+                      <td><strong>Price: </strong>  &nbsp; ${item.price}</td>
+                      <td><strong>Sold: </strong>  &nbsp; #{item.amtsold}</td>
+                      <td><strong>Revenue: </strong>  &nbsp; ${item.revenue}</td>
+
                     </table>
                   </div>
 
