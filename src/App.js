@@ -11,7 +11,11 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 
+
+
 function App() {
+
+
 
   var Mdemand = -1000;
   var Bdemand = 10000;
@@ -23,6 +27,8 @@ function App() {
   var range = 10;
   let maxPrice = 0;
   var savePrice = 0;
+  var tableData = []
+
 
   const [value, setValue] = useState(0);
   const [widgets, setWidgets] = useState();
@@ -31,6 +37,14 @@ function App() {
   const [sold, setConsumption] = useState();
   const [edited, setEdited] = useState(false);
   const [constants, setConstants] = useState()
+
+  //Build Table
+
+  for (let i = 1; i <= 10; i++) {
+    var amtsold = i * Mdemand + Bdemand;
+    let revenue = amtsold * i
+    tableData.push({ price: i, amtsold: amtsold, revenue: revenue })
+  }
 
   //Canvasjs options
   const options = {
@@ -80,39 +94,25 @@ function App() {
 
   }
 
-
-
-
-
-
-
-
   const handleChange = e => {
     if (e.target.checked) {
       setValue(e.target.value)
     }
-    console.log(value);
-
   }
-
 
   for (let i = 1; i <= range; i++) {
     if (((i * Mdemand + Bdemand) * i) >= maxPrice) {
       maxPrice = ((i * Mdemand + Bdemand) * i);
       savePrice = i;
     }
-
-
-
   }
-
 
 
   function calculateOutput() {
     let price = 0;
     var priceOptions = document.getElementsByName("price");
 
-    if (value > 1 && value <= 10) {
+    if (value > 0 && value <= 10) {
       setEdited(true);
     }
     else {
@@ -164,15 +164,19 @@ function App() {
 
   }
 
+  const buildData = () => {
+
+  }
+
   return (
     <div className='App'>
       <header>
-        <h1> XYZ Widget Equilibrium Pricing</h1>
+        <h1> XYZ Widget <a  href = 'https://www.investopedia.com/terms/e/equilibrium.asp' target="_blank">Equilibrium</a> Pricing</h1>
       </header>
       <div className="main-app">
         <div className="app-left">
           <div id="intro" className="container">
-            <h2>ABC Company Inc. has just invented the XYZ Widget. A revolutionary product that will change the lives of everyone that buys it. In this exercise, you will help ABC Company Inc choose the correct equillibrium price for the new product. </h2>
+            <h2>ABC Company Inc. has just invented the XYZ Widget. A revolutionary product that will change the lives of everyone that buys it. In this exercise, you will help ABC Company Inc choose the correct <a href = 'https://www.investopedia.com/terms/e/equilibrium.asp' target="_blank">equilibrium</a> price for the new product. </h2>
           </div>
           <div id='input' className='container'>
             <form>
@@ -231,7 +235,7 @@ function App() {
           </div>
         </div>
         <div className='app-right'>
-          <p></p>
+
           <div className='graphs'>
             {edited ? (
               <CanvasJSChart options={options} />
@@ -240,6 +244,43 @@ function App() {
             )}
             {/* <CanvasJSChart options={options}/> */}
             {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
+          </div>
+          <div className='app-data-overall'>
+            {tableData.map((item) => {
+              if (item.price !== 5) {
+                return (
+                  <div>
+                    <table>
+                      <tr>
+                        <td><strong>Price: </strong>  &nbsp; ${item.price}</td>
+                        <td><strong>Sold: </strong>  &nbsp; #{item.amtsold}</td>
+                        <td><strong>Revenue: </strong>  &nbsp; ${item.revenue}</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                )
+              }
+              else{
+                return (
+                  <div>
+                    <table className = 'highlight-price'>
+                      <tr>
+                        <td><strong>Price: </strong>  &nbsp; ${item.price}</td>
+                        <td><strong>Sold: </strong>  &nbsp; #{item.amtsold}</td>
+                        <td><strong>Revenue: </strong>  &nbsp; ${item.revenue}</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                )
+              }
+            })}
+            {/* <div className='app-data'>
+              <p>Product Price: </p>
+              <p>Amount Sold: </p>
+              <p>Revenue: </p>
+            </div> */}
           </div>
 
 

@@ -36,54 +36,61 @@
     transform: rotate(360deg);
   }
 } */
-.calcButton{
-  margin-top:2%;
-}
-.calcButton button{
-  width:75px;
-  height:25px;
+.calcButton {
+  margin-top: 2%;
 }
 
-header{
-  display:flex;
+.calcButton button {
+  width: 75px;
+  height: 25px;
+}
+
+header {
+  display: flex;
   justify-content: center;
   background-color: #E6E6E6;
 }
-.main-app{
+
+.main-app {
   background-color: whitesmoke;
-  height:100vh;
-  display:flex;
+  height: 90vh;
+  display: flex;
   justify-content: space-evenly;
 }
-.app-left{
+
+.app-left {
   flex-direction: column;
-  display:flex;
-  width:50%;
-  border:1px solid grey;
+  display: flex;
+  width: 50%;
+  border: 1px solid grey;
   background-color: whitesmoke;
+  margin-left: .2%;
 }
-.app-right{
+
+.app-right {
   flex-direction: column;
-  display:flex;
-  width:50%;
-  border:1px solid grey;
+  display: flex;
+  width: 50%;
+  border: 1px solid grey;
   background-color: whitesmoke;
   text-align: center;
-  font-size:20px;
+  font-size: 20px;
+  margin-right: .1%
 }
-p{
-  color:black
+
+p {
+  color: black
 }
 
 
 .container {
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin: 20px;
   padding: 20px;
   background-color: #E6E6E6;
-  border:1px solid grey;
+  border: 1px solid grey;
 }
 
 
@@ -95,11 +102,49 @@ p{
 }
 
 
-.message{
-  font-weight: bold ;
+.message {
+  font-weight: bold;
 }
 
-.canvasjs-chart-canvas{
-  width:99%;
-  
+.canvasjs-chart-canvas {
+  width: 99%;
+  margin-left: 1%;
 }
+
+.app-data {
+  display: flex;
+
+  justify-content: space-around;
+  border: 1px solid black;
+}
+
+.app-data p {
+  padding-left: 1%;
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+}
+
+table, tr, td {
+  border: 1px solid;
+  display:flex;
+  width:100%;
+}
+
+table{
+  background-color:#E6E6E6;
+  width:100%
+}
+
+.highlight-price{
+  background-color:#e9ff32;
+}
+
+a{
+  color:black;
+}
+
+a:hover{
+  color:purple;
+}
+
