@@ -1,3 +1,11 @@
+#README Project for KethPath Interview
+
+Current:
+For this project, I migrated over existing code and reorganized the files for a single-page react.js application. I worked to make the page more accessible and responsive for all different users, including changing the style and color of the text and page format to allow for easier visual access to the page. I worked to improve the style to fit a more simplistic datasheet feel and added additional graphs and charts to make the page abit more interactive for the user.
+
+ToDo: setup local storage to save data in browser, either build out an api or integrate with a public api to get real data and make page more versatile rather than a specialty page that is only handling data for one situation, more styling ideas, graphics or information for equilibrium price.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
