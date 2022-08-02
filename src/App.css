@@ -36,21 +36,70 @@
     transform: rotate(360deg);
   }
 } */
+.calcButton{
+  margin-top:2%;
+}
+.calcButton button{
+  width:75px;
+  height:25px;
+}
 
+header{
+  display:flex;
+  justify-content: center;
+  background-color: #E6E6E6;
+}
+.main-app{
+  background-color: whitesmoke;
+  height:100vh;
+  display:flex;
+  justify-content: space-evenly;
+}
+.app-left{
+  flex-direction: column;
+  display:flex;
+  width:50%;
+  border:1px solid grey;
+  background-color: whitesmoke;
+}
+.app-right{
+  flex-direction: column;
+  display:flex;
+  width:50%;
+  border:1px solid grey;
+  background-color: whitesmoke;
+  text-align: center;
+  font-size:20px;
+}
+p{
+  color:black
+}
 
 
 .container {
+  text-align: center;
+  display:flex;
+  flex-direction: column;
   margin: 20px;
   padding: 20px;
-  background-color: #76D6FF;
+  background-color: #E6E6E6;
+  border:1px solid grey;
 }
 
-#result {
-  color: #7A81FF;
-}
+
 
 @media screen and (max-width: 700px) {
   input {
     display: block;
   }
+}
+
+
+.message{
+  font-weight: bold ;
+}
+
+.canvasjs-chart-canvas{
+  width:99%;
+  
 }
